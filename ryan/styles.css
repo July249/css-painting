@@ -154,7 +154,7 @@ body {
   z-index: -900;
 }
 
-.ryan .open:before {
+.ryan:hover .open:before {
   content: '';
   position: absolute;
   width: 6px;

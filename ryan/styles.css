@@ -1,32 +1,38 @@
+:root {
+  --skin-color: #d59729;
+  --bg-color: #313654;
+  --border-color: #000;
+  --mouth-color: #fff;
+}
+
 *,
-*:after,
-*:before {
-  /* padding이나 border-width로 인해 전체 사이즈에 영향을 받지 않도록 선언해 줍니다. */
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
 body {
-  background-color: #313654;
+  background-color: var(--bg-color);
 }
 
-/* 전체 영역 잡아주기 */
+/* 전체 영역 잡기 */
 .ryan {
-  position: relative; /* 라이언 기준점 잡기 */
-  margin: 50px auto; /* 상하 50px 여백을 주고 좌우는 중앙 정렬 */
+  position: relative;
+  margin: 50px auto;
   width: 400px;
   height: 380px;
 }
 
-/* 전체 영역에서 밑에 딱 붙은 얼굴(원)를 그립니다. */
+/* 전체 영역에서 밑에 딱 붙은 얼굴(원)을 그린다. */
 .ryan .face {
   position: absolute;
   bottom: 0;
   width: 400px;
   height: 367px;
-  border-radius: 100%; /* 원형으로 만들기 */
-  border: 10px solid #000;
-  background: #d59729;
-  z-index: -800;
+  border-radius: 50%;
+  border: 10px solid var(--border-color);
+  background: var(--skin-color);
+  z-index: -99;
 }
 
 /* 귀 */
@@ -35,9 +41,9 @@ body {
   top: 0;
   width: 92px;
   height: 92px;
-  border: 10px solid #000;
-  border-radius: 100%;
-  background-color: #d59729;
+  border: 10px solid var(--border-color);
+  border-radius: 50%;
+  background-color: var(--skin-color);
   z-index: -999;
 }
 
@@ -56,7 +62,7 @@ body {
   width: 78px;
   height: 14px;
   border-radius: 14px;
-  background: #000;
+  background: var(--border-color);
   transition: all 0.2s;
 }
 
@@ -74,8 +80,8 @@ body {
   top: 147px;
   width: 26px;
   height: 26px;
-  border-radius: 100%;
-  background: #000;
+  border-radius: 50%;
+  background: var(--border-color);
   transition: all 0.2s;
 }
 
@@ -92,12 +98,12 @@ body {
   position: absolute;
   top: 184px;
   left: 50%;
-  margin-left: -16px;
   width: 32px;
   height: 33px;
+  margin-left: -16px;
   border-radius: 100%;
-  background: #000;
-  z-index: 999; /* z-index로 입보다 코가 위로 올라오도록 합니다. */
+  background: var(--border-color);
+  z-index: 999;
 }
 
 /* 입 */
@@ -107,10 +113,11 @@ body {
   right: 73px;
   width: 73px;
   height: 68px;
-  border: 10px solid #000;
+  border: 10px solid var(--border-color);
   border-radius: 50%;
-  background: #fff;
+  background: var(--mouth-color);
 }
+
 .ryan .mouth.left {
   left: 127px;
 }
@@ -119,29 +126,27 @@ body {
   right: 127px;
 }
 
-/* 이 아래 부분은 생략하셔도 괜찮습니다. */
-/* :before, :after 가상요소를 활용하여 입 부분을 좀 더 완성도 있게 만들어 주었습니다. */
-.ryan .mouth:before {
+.ryan .mouth::before {
   content: '';
   position: absolute;
   width: 30px;
   height: 33px;
-  background: #fff;
-  -webkit-transform: rotate(-45deg);
+  background: var(--mouth-color);
   transform: rotate(-45deg);
   z-index: 99;
 }
 
-.ryan .mouth.left:before {
+.ryan .mouth.left::before {
   top: 2px;
   left: 29px;
 }
 
-.ryan .mouth.right:before {
+.ryan .mouth.right::before {
   top: 2px;
   right: 31px;
 }
 
+/* 변화 요소 */
 .ryan:hover .open {
   width: 73px;
   height: 68px;
@@ -165,21 +170,14 @@ body {
   background-color: rgba(105, 105, 105, 0.3);
 }
 
-/* .ryan에 hove(마우스오버) 했을 때 변화를 적어줍니다. */
-
-/* 왼쪽 눈썹이 내려갑니다.(106px->100px) */
 .ryan:hover .eyebrow.left {
   top: 100px;
 }
 
-/* 오른쪽 눈썹이 -10deg 움직입니다. */
 .ryan:hover .eyebrow.right {
-  -webkit-transform: rotate(-10deg);
   transform: rotate(-10deg);
 }
 
-/* 오른쪽 눈 크기가 가로는 2배 세로는 0.1배로 변합니다. */
 .ryan:hover .eye.right {
-  -webkit-transform: scale(2, 0.1);
   transform: scale(2, 0.1);
 }

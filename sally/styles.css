@@ -1,0 +1,112 @@
+:root {
+  --face-clr: #fdcf1e;
+  --eye-clr: #000;
+  --eye-shadow: #f7ac27;
+  --tear-border-clr: #0b689f;
+  --tear-clr: #1691d9;
+  --lip-border-clr: #c92f00;
+  --lip-clr: #f54c00;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.sally {
+  position: relative;
+}
+
+.sally .face {
+  width: 600px;
+  height: 600px;
+  margin: 100px auto;
+  border-radius: 50%;
+  background: var(--face-clr);
+  z-index: -999;
+}
+
+.sally .eye {
+  width: 76px;
+  height: 76px;
+  position: absolute;
+  top: 12.5em;
+  background: var(--eye-clr);
+  border-radius: 50%;
+}
+
+.sally .eye.left {
+  left: 28em;
+}
+
+.sally .eye.right {
+  top: 12.8em;
+  right: 33em;
+  z-index: 999;
+}
+
+.sally .shadow {
+  width: 230px;
+  height: 80px;
+  position: absolute;
+  top: 15em;
+  left: 26em;
+  background: var(--eye-shadow);
+  border-radius: 50%;
+  transform: rotate(4deg);
+  z-index: 0;
+}
+
+.sally .tear {
+  position: absolute;
+  top: 16.8em;
+  left: 36.6em;
+  width: 150px;
+  height: 78px;
+  border: 10px solid #0b689f;
+  border-radius: 100% 0 55% 50%/55% 0 80% 50%;
+  background: #1691d9;
+  transform: rotate(100deg);
+  transform: scaleX(-1);
+  transition: all 0.35s;
+  z-index: 900;
+}
+
+.sally .lip {
+  position: absolute;
+  width: 340px;
+  height: 110px;
+  background: var(--lip-clr);
+  border: 10px solid var(--lip-border-clr);
+}
+
+.sally .lip.outline {
+  top: 20.2em;
+  left: 39em;
+  width: 80px;
+  height: 144px;
+  border-radius: 50%;
+  border-color: var(--lip-border-clr) var(--lip-border-clr) var(--lip-clr)
+    var(--lip-clr);
+  transform: rotate(39deg);
+  z-index: 100;
+}
+
+.sally .lip.bottom {
+  top: 21.8em;
+  left: 23.2em;
+  width: 320px;
+  height: 143px;
+  transform: rotate(-5deg);
+  border-radius: 50% 40% 50% 50%;
+}
+
+.sally .lip.top {
+  top: 17.6em;
+  left: 21em;
+  width: 360px;
+  height: 120px;
+  transform: rotate(4deg);
+  border-radius: 170% 50% 100% 100%;
+}

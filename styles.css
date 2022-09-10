@@ -1,1 +1,28 @@
+html {
+  background-color: antiquewhite;
+}
 
+.board {
+  width: 720px;
+  margin: 100px auto;
+  padding: 10px 0;
+  background-color: green;
+  text-align: center;
+}
+
+.board h1 {
+  margin: 40px 0;
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+}
+
+.image-list {
+}
+
+.image-list-item {
+  padding: 14px;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}

@@ -16,6 +16,9 @@
 
 .sally {
   position: relative;
+  margin: 50px auto;
+  width: 600px;
+  height: 600px;
 }
 
 .sally .face {
@@ -37,12 +40,12 @@
 }
 
 .sally .eye.left {
-  left: 28em;
+  left: 12em;
 }
 
 .sally .eye.right {
   top: 12.8em;
-  right: 33em;
+  right: 15em;
   z-index: 999;
 }
 
@@ -51,7 +54,7 @@
   height: 80px;
   position: absolute;
   top: 15em;
-  left: 26em;
+  left: 9.8em;
   background: var(--eye-shadow);
   border-radius: 50%;
   transform: rotate(4deg);
@@ -61,7 +64,7 @@
 .sally .tear {
   position: absolute;
   top: 16.8em;
-  left: 36.6em;
+  left: 20.6em;
   width: 150px;
   height: 78px;
   border: 10px solid #0b689f;
@@ -83,7 +86,7 @@
 
 .sally .lip.outline {
   top: 20.2em;
-  left: 39em;
+  left: 22em;
   width: 80px;
   height: 144px;
   border-radius: 50%;
@@ -94,8 +97,8 @@
 }
 
 .sally .lip.bottom {
-  top: 21.8em;
-  left: 23.2em;
+  top: 21.2em;
+  left: 7em;
   width: 320px;
   height: 143px;
   transform: rotate(-5deg);
@@ -103,8 +106,8 @@
 }
 
 .sally .lip.top {
-  top: 17.6em;
-  left: 21em;
+  top: 19.3em;
+  left: 5em;
   width: 360px;
   height: 120px;
   transform: rotate(4deg);

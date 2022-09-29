@@ -1,5 +1,3 @@
-/* resets */
-
 *,
 *::after,
 *::before {
@@ -28,6 +26,7 @@
 }
 
 .head {
+  display: inline-block;
   position: relative;
   top: 110px;
   left: 120px;
@@ -252,4 +251,10 @@
 .hand.right {
   right: 120px;
   transform: rotate(-30deg);
+}
+
+.body:hover + .hand.right {
+  bottom: 60px;
+  right: 100px;
+  transform: rotate(60deg);
 }

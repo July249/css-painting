@@ -1,0 +1,355 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 720px;
+  height: 600px;
+  margin: 100px auto;
+  background-color: #f7e8bd;
+  z-index: 0;
+}
+
+.nyangi,
+.nyangnyangi {
+  position: relative;
+  width: 280px;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nyangi {
+  top: 200px;
+  left: 15px;
+  z-index: 60;
+}
+
+.nyangnyangi {
+  top: 200px;
+  right: 10px;
+  z-index: 50;
+}
+
+.ear {
+  position: absolute;
+  top: -12px;
+  width: 80px;
+  height: 80px;
+  border: 10px solid black;
+  background-color: var(--sec);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.ear.left {
+  left: 40px;
+  transform: rotate(-60deg);
+  animation: ani-ear-left 1s infinite alternate;
+}
+
+.ear.right {
+  right: 40px;
+  transform: rotate(60deg);
+  animation: ani-ear-right 1s infinite alternate;
+}
+
+.nyangi .ear {
+  background-color: #cbcbcb;
+  z-index: 0;
+}
+
+.nyangnyangi .ear {
+  background-color: #f4c64a;
+}
+
+.face {
+  width: 280px;
+  height: 200px;
+  border: 10px solid black;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.nyangi .face {
+  background-color: #cbcbcb;
+}
+
+.nyangnyangi .face {
+  background-color: #f4c64a;
+}
+
+/* whiskers */
+.whiskers-left,
+.whiskers-right {
+  position: absolute;
+  top: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100px;
+  height: 80px;
+}
+
+.nyangi .whiskers-left {
+  left: -40px;
+}
+
+.nyangi .whiskers-right {
+  right: -38px;
+}
+
+.nyangnyangi .whiskers-left {
+  width: 50px;
+  left: -10px;
+}
+
+.nyangnyangi .whiskers-right {
+  right: -38px;
+}
+
+.nyangi .whiskersline-1,
+.nyangi .whiskersline-2,
+.nyangi .whiskersline-3,
+.nyangnyangi .whiskersline-1,
+.nyangnyangi .whiskersline-2,
+.nyangnyangi .whiskersline-3 {
+  width: 80px;
+  height: 5px;
+  background-color: black;
+}
+
+.nyangi .whiskers-left .whiskersline-1,
+.nyangi .whiskers-left .whiskersline-2,
+.nyangi .whiskers-left .whiskersline-3,
+.nyangnyangi .whiskers-left .whiskersline-1,
+.nyangnyangi .whiskers-left .whiskersline-2,
+.nyangnyangi .whiskers-left .whiskersline-3 {
+  border-radius: 24% 76% 76% 24% / 71% 100% 0% 29%;
+}
+
+.nyangi .whiskers-right .whiskersline-1,
+.nyangi .whiskers-right .whiskersline-2,
+.nyangi .whiskers-right .whiskersline-3,
+.nyangnyangi .whiskers-right .whiskersline-1,
+.nyangnyangi .whiskers-right .whiskersline-2,
+.nyangnyangi .whiskers-right .whiskersline-3 {
+  border-radius: 76% 24% 24% 76% / 100% 71% 29% 0%;
+}
+
+.nyangi .whiskersline-1,
+.nyangnyangi .whiskersline-1 {
+  left: 0;
+}
+
+.nyangi .whiskersline-2,
+.nyangnyangi .whiskersline-2 {
+  left: 10px;
+}
+
+.nyangi .whiskersline-3,
+.nyangnyangi .whiskersline-3 {
+  left: 20px;
+}
+
+.nyangi .whiskers-left .whiskersline-1,
+.nyangnyangi .whiskers-left .whiskersline-1 {
+  transform: rotate(10deg);
+}
+
+.nyangi .whiskers-left .whiskersline-2,
+.nyangnyangi .whiskers-left .whiskersline-2 {
+  transform: rotate(-5deg);
+}
+
+.nyangi .whiskers-left .whiskersline-3,
+.nyangnyangi .whiskers-left .whiskersline-3 {
+  transform: rotate(-20deg);
+}
+
+.nyangi .whiskers-right .whiskersline-1,
+.nyangnyangi .whiskers-right .whiskersline-1 {
+  transform: rotate(-10deg);
+}
+
+.nyangi .whiskers-right .whiskersline-2,
+.nyangnyangi .whiskers-right .whiskersline-2 {
+  transform: rotate(5deg);
+}
+
+.nyangi .whiskers-right .whiskersline-3,
+.nyangnyangi .whiskers-right .whiskersline-3 {
+  transform: rotate(20deg);
+}
+
+/* eye-group */
+.face .eye-group {
+  position: relative;
+  top: 55px;
+  left: 30px;
+  width: 200px;
+  height: 60px;
+}
+
+.eye-group .eye {
+  position: absolute;
+  top: 0;
+  width: 70px;
+  height: 60px;
+  border: 5px solid black;
+  background-color: white;
+  overflow: hidden;
+}
+
+.eye-group .eye.left {
+  left: 5px;
+  border-radius: 23% 77% 76% 24% / 71% 50% 50% 29%;
+}
+
+.eye-group .eye.right {
+  right: 5px;
+  border-radius: 76% 24% 24% 76% / 50% 71% 29% 50%;
+}
+
+.nyangi .eye.left,
+.nyangi .eye.right {
+  height: 50px;
+}
+
+.nyangnyangi .eyebrow-left,
+.nyangnyangi .eyebrow-right {
+  position: absolute;
+  top: -10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 40px;
+  height: 15px;
+}
+
+.nyangnyangi .eyebrow-left {
+  left: 30px;
+  transform: rotate(12deg);
+}
+
+.nyangnyangi .eyebrow-right {
+  right: 30px;
+  transform: rotate(-12deg);
+}
+
+.nyangnyangi .eyeline-1,
+.nyangnyangi .eyeline-2,
+.nyangnyangi .eyeline-3 {
+  width: 3px;
+  height: 15px;
+  border-radius: 30px;
+  background-color: black;
+}
+
+.nyangnyangi .eyebrow-left .eyeline-1,
+.nyangnyangi .eyebrow-left .eyeline-2,
+.nyangnyangi .eyebrow-left .eyeline-3 {
+  border-radius: 24% 76% 76% 24% / 71% 100% 0% 29%;
+}
+
+.nyangnyangi .eyebrow-right .eyeline-1,
+.nyangnyangi .eyebrow-right .eyeline-2,
+.nyangnyangi .eyebrow-right .eyeline-3 {
+  border-radius: 76% 24% 24% 76% / 100% 71% 29% 0%;
+}
+
+.nyangnyangi .eyeline-1 {
+  left: 0;
+}
+
+.nyangnyangi .eyeline-2 {
+  left: 10px;
+}
+
+.nyangnyangi .eyeline-3 {
+  left: 20px;
+}
+
+.nyangnyangi .eyebrow-left .eyeline-1 {
+  transform: rotate(-20deg);
+}
+
+.nyangnyangi .eyebrow-left .eyeline-2 {
+  transform: rotate(0deg);
+}
+
+.nyangnyangi .eyebrow-left .eyeline-3 {
+  transform: rotate(20deg);
+}
+
+.nyangnyangi .eyebrow-right .eyeline-1 {
+  transform: rotate(-20deg);
+}
+
+.nyangnyangi .eyebrow-right .eyeline-2 {
+  transform: rotate(0deg);
+}
+
+.nyangnyangi .eyebrow-right .eyeline-3 {
+  transform: rotate(20deg);
+}
+
+.nyangnyangi .eye.left {
+  transform: rotate(-5deg);
+}
+
+.nyangnyangi .eye.right {
+  transform: rotate(5deg);
+}
+
+.iris {
+  position: absolute;
+  top: 0px;
+  width: 45px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.iris.left {
+  left: 11px;
+}
+
+.iris.right {
+  right: 11px;
+}
+
+.nyangi .iris.left,
+.nyangi .iris.right {
+  top: -5px;
+  width: 50px;
+  height: 60px;
+}
+
+.mouth-group {
+  position: absolute;
+  bottom: 0;
+  left: 120px;
+  width: 50px;
+  height: 60px;
+  transform: rotate(34deg);
+}
+
+.mouth.left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 25px;
+  border-bottom: 5px solid black;
+  border-left: 5px solid black;
+}
+
+.mouth.right {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 40px;
+  height: 30px;
+  border-left: 5px solid black;
+}
